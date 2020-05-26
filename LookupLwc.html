@@ -4,17 +4,17 @@
             <div class="slds-form-element">
                 <label class="slds-form-element__label" for="lookup">Filter by Ledger Account</label>
                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
-                    <lightning-icon icon-name="utility:search" alternative-text="Search" title="Search"
-                                class={iconClass} size="x-small"></lightning-icon>
                     <div class={pillClass}>
-                        <a href="#void" class="slds-pill">
+                        <span class="slds-pill slds-size_1-of-1">
                             <span class="slds-pill__label">{selectedObject.Name}</span> 
                             <button class="slds-button slds-button--icon-bare slds-pill__remove" onclick={removeSelection}>
                                 <lightning-icon icon-name="utility:close" alternative-text="close" title="close"></lightning-icon>
                                 <span class="slds-assistive-text">Remove</span>
                             </button>
-                        </a>
+                        </span>
                     </div>
+                    <lightning-icon icon-name="utility:search" alternative-text="Search" title="Search"
+                                class={iconClass} size="x-small"></lightning-icon>
                     <input id="lookup" class={inputClass} type="text" aria-autocomplete="list" role="combobox" 
                             placeholder="Search Ledger Account" aria-expanded="true" aria-activedescendant="" 
                             onfocus={showRecordList} onkeyup={handleSearchTextChange} required/>
